@@ -36,7 +36,7 @@ public class PacienteService implements IPacienteService {
     }
 
     @Override
-    public void editPaciente(Paciente pac) {
+    public void editPaciente(Long id_original, Paciente pac) {
         this.savePaciente(pac);
     }
 }

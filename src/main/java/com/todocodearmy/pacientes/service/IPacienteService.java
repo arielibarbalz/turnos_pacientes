@@ -9,5 +9,5 @@ public interface IPacienteService {
     public void savePaciente(Paciente pac);
     public void deletePaciente(Long id);
     public Paciente findPaciente(Long id);
-    public void editPaciente(Paciente pac);
+    public void editPaciente(Long id_original, Paciente pac);
 }
