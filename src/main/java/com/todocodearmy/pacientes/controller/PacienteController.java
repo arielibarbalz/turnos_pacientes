@@ -23,6 +23,7 @@ public class PacienteController {
     public List<Paciente> traerPacientes(){
         return pacienteService.getPacientes();
     }
+
     @DeleteMapping("/borrar/{id}")
     public String deletePaciente(@PathVariable Long id){
         pacienteService.deletePaciente(id);
@@ -39,4 +40,8 @@ public class PacienteController {
         return pacienteService.findPaciente(id);
     }
 
+    @GetMapping("/traerdni/{dni}")
+    public Paciente traerPacienteDni(@PathVariable String dni) {
+        return pacienteService.findPacienteDni(dni);
+    }
 }
