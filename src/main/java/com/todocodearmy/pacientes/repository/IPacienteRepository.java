@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface IPacienteRepository extends JpaRepository<Paciente, Long> {
-    @Query("SELECT pac FROM Paciente pac WHERE pac.dni=:dni")
-    Paciente findByDni(@Param("dni") String dni);
+    @Query("SELECT pac FROM Paciente pac WHERE pac.dni= :dni")
+    Paciente findByDni(String dni);
 }
